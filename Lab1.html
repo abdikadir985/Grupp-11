@@ -40,7 +40,7 @@
           //skapa table text
           tableText = '<table>';
            function forloop(){
-             //10 kolumner
+             //10 rader
             for(var i=0;i<10;i++){
               //om <tr> finns inte skapa <tr>. 
               if(tableTR==undefined){
@@ -48,9 +48,9 @@
               }else
               //om <tr> finns lägga till ny <tr> 
                 tableTR=tableTR+'<tr>';
-                //rader i kolumn. När skapades 10 rader ska for loop som ligger utanför ska köras. 
+                //kolumn i rad. När skapades 10 kolumner ska for loop som ligger utanför ska köras. 
               for(var j=0;j<10;j++){
-                //kolumNummer * 10 + radNummer
+                //radNummer * 10 + kolumnNummer
                 tableTD = '<td>'+array[i*10+j]+'</td>';
                 //lägga <td> i <tr>
                 tableTR+=tableTD;
