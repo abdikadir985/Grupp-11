@@ -25,9 +25,9 @@
       //<tr>, <td>
       var tableTR, tableTD;
       var tableText;
-      //slumpa 100 olika tal med tal mellan 1-1001
+      //slumpa 100 olika tal med tal mellan 1-1000
       for(var i=0;i<100;i++){
-        randomTal = Math.floor(Math.random()*1001)+1;
+        randomTal = Math.floor(Math.random()*1000)+1;
         array[i]=randomTal;
       }
 
