@@ -42,7 +42,7 @@
       tableText = '<table class="table table-bordered table-responsive text-center">';
       function forloop(){
         for(var i=0;i<10;i++){
-        //skapa tablerad (högervänster)
+        //om tabelraden inte finns: skapa tablerad (högervänster)
           if(tableTR==undefined){
             tableTR='<tr>';
           }else
