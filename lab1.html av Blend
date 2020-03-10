@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript för webbutveckling (ISGB15) 5hp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="jumbotron text-center">
+    <h1>Laboration 1</h1>
+  </div>
+
+  <div class="container-fluid">
+
+    <p class="h4">Lösningen skapad av [här listar ni gruppnummer och namn på gruppmedlemmarna].</p>
+    <div class="table-responsive">
+
+      <script type="text/javascript">
+      "use strict";
+      var randomTal;
+      //skapa en tom vektor
+      var array=[];
+      //<tr>, <td>
+      var tableTR, tableTD;
+      var tableText;
+      //slumpa 100 olika tal med tal mellan 1-1001
+      for(var i=0;i<100;i++){
+        randomTal = Math.floor(Math.random()*1001)+1;
+        array[i]=randomTal;
+      }
+
+      //sortera vektor i stigande ordning
+      //javascript har redan .sort() färdigt att använda som metod men
+      //kräver det lilla tilläget för att låta en utgå ifrån siffror istället
+      array.sort(function(a,b){
+        return a - b;
+      })
+
+      //skapa table text
+      tableText = '<table class="table table-bordered table-responsive text-center">';
+      function forloop(){
+        for(var i=0;i<10;i++){
+        //skapa tablerad (högervänster)
+          if(tableTR==undefined){
+            tableTR='<tr>';
+          }else
+          //lägg till taberad (högervänster)
+          tableTR=tableTR+'<tr>';
+          for(var j=0;j<10;j++){
+          //här skapar du 10 tablekolumn (uppned)
+            tableTD = '<td>'+array[i*10+j]+'</td>';
+            //ovan ser till att varje rad håller ihop med varje kolumn du har.
+            //här har du en array som tar 10 rader och lägger in de för varje kolumn du har
+            tableTR+=tableTD;
+          }
+          tableTR+='</tr>'
+        }
+        return tableTR;
+      }
+      tableText=tableText+ forloop()+'</table>';
+      //denna ser bara till att tabletexten finns mellan table du har tillgänglig att använda
+
+      //skriva ut en tabel
+      document.write(tableText);
+      </script>
+
+    </div>
+    <a href="" class="btn btn-primary" role="button">Kör igen</a>
+  </div>
+
+</body>
+</html>
