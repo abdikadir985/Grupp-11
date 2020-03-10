@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript för webbutveckling (ISGB15) 5hp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+
+    <div class="jumbotron text-center">
+      <h1>Laboration 1</h1>
+    </div>
+
+    <div class="container-fluid">
+
+      <p class="h4">Lösningen skapad av [här listar ni gruppnummer och namn på gruppmedlemmarna].</p>
+      <div class="table-responsive">
+
+        <script type="text/javascript">
+          "use strict";
+          var randomTal;
+          //skapa en tom vektor
+          var array=[];
+          //<tr>, <td>
+          var tableTR, tableTD;
+          var tableText;
+          //slumpa nummer 100 gånger och spara i en vektor
+          for(var i=0;i<100;i++){
+            randomTal = Math.floor(Math.random()*1001)+1;
+            array[i]=randomTal;
+          }
+
+          //sortera vektor i stigande ordning
+          //javascript har redan färdigt metod .sort() som man kan använda för sortering
+          array.sort(function(a,b){
+            return a - b;
+          })
+
+          //skapa table text
+          tableText = '<table>';
+           function forloop(){
+             //10 kolumner
+            for(var i=0;i<10;i++){
+              //om <tr> finns inte skapa <tr>. 
+              if(tableTR==undefined){
+                tableTR='<tr>';
+              }else
+              //om <tr> finns lägga till ny <tr> 
+                tableTR=tableTR+'<tr>';
+                //rader i kolumn. När skapades 10 rader ska for loop som ligger utanför ska köras. 
+              for(var j=0;j<10;j++){
+                //kolumNummer * 10 + radNummer
+                tableTD = '<td>'+array[i*10+j]+'</td>';
+                //lägga <td> i <tr>
+                tableTR+=tableTD;
+              }
+              //stänga <tr>
+              tableTR+='</tr>'
+              //tableTR+=tableTD+'<br></tr>';
+            }
+            return tableTR;
+          }
+          tableText=tableText+ forloop()+'</table>';
+          
+          //skriva ut en tabel
+          document.write(tableText);
+        </script>
+
+      </div>
+      <a href="" class="btn btn-primary" role="button">Kör igen</a>
+    </div>
+
+  </body>
+</html>
