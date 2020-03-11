@@ -25,10 +25,18 @@
       //<tr>, <td>
       var tableTR, tableTD;
       var tableText;
+
       //slumpa 100 olika tal med tal mellan 1-1000
-      for(var i=0;i<100;i++){
+      
+      /*for(var i=0;i<100;i++){
         randomTal = Math.floor(Math.random()*1000)+1;
         array[i]=randomTal;
+      }*/
+      let i=0;
+      while(i<100){
+        randomTal=Math.floor(Math.random()*1000)+1;
+        array[i]=randomTal;
+        i++;
       }
 
       //sortera vektor i stigande ordning
@@ -41,14 +49,14 @@
       //skapa table text
       tableText = '<table class="table table-bordered table-responsive text-center">';
       function forloop(){
-        for(var i=0;i<10;i++){
+        for(let i=0;i<10;i++){
         //om tabelraden inte finns: skapa tablerad (högervänster)
           if(tableTR==undefined){
             tableTR='<tr>';
           }else
           //lägg till taberad (högervänster)
           tableTR=tableTR+'<tr>';
-          for(var j=0;j<10;j++){
+          for(let j=0;j<10;j++){
           //här skapar du 10 tablekolumn (uppned)
             tableTD = '<td>'+array[i*10+j]+'</td>';
             //ovan ser till att varje rad håller ihop med varje kolumn du har.
