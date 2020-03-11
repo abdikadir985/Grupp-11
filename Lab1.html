@@ -14,7 +14,7 @@
 
     <div class="container-fluid">
 
-      <p class="h4">Lösningen skapad av [här listar ni gruppnummer och namn på gruppmedlemmarna].</p>
+      <p class="h4">Lösningen skapad av [Jeong Hoseop, Omar Abdikadir Abdirahman, Eriksson Albin, Zebari Blend].</p>
       <div class="table-responsive">
 
         <script type="text/javascript">
@@ -38,19 +38,19 @@
           })
 
           //skapa table text
-          tableText = '<table>';
+          tableText = '<table class="table table-bordered table-responsive text-center">';
            function forloop(){
-             //10 rader
+             //10 kolumner
             for(var i=0;i<10;i++){
-              //om <tr> finns inte skapa <tr>. 
+              //om <tr> finns inte skapa <tr>.
               if(tableTR==undefined){
                 tableTR='<tr>';
               }else
-              //om <tr> finns lägga till ny <tr> 
+              //om <tr> finns lägga till ny <tr>
                 tableTR=tableTR+'<tr>';
-                //kolumn i rad. När skapades 10 kolumner ska for loop som ligger utanför ska köras. 
+                //rader i kolumn. När skapades 10 rader ska for loop som ligger utanför ska köras.
               for(var j=0;j<10;j++){
-                //radNummer * 10 + kolumnNummer
+                //kolumNummer * 10 + radNummer
                 tableTD = '<td>'+array[i*10+j]+'</td>';
                 //lägga <td> i <tr>
                 tableTR+=tableTD;
@@ -62,7 +62,7 @@
             return tableTR;
           }
           tableText=tableText+ forloop()+'</table>';
-          
+
           //skriva ut en tabel
           document.write(tableText);
         </script>
