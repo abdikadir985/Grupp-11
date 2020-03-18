@@ -15,7 +15,7 @@ function validateForm() {
             throw new Error ("välj en annan rad i select-listan");
         }
         //loopa alla textrutor
-        for(let i=0;i<textRuta.length-1;i++){
+        for(let i=0;i<textRuta.length;i++){
             currentText = textRuta.item(i);
             //om någon textrutan är tom skicka error
             if(currentText.value.length==""){
