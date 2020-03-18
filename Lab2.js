@@ -47,5 +47,8 @@ function validateForm() {
 }
 //reset formuläret
 function resetForm() {
+    document.getElementById("errorMsg").innerHTML = "";
+
+    document.getElementsByTagName("div")[2].removeAttribute("class");
     return false;
 }
