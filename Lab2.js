@@ -21,8 +21,8 @@ function validateForm() {
             }
         }
         if(checkBox.checked){
-            if(textArea.innerHTML.value<5){
-                throw new Error ("Kommentar måste vara längre än 5 tecken");
+            if(textArea.value.length<5){
+                throw new Error("kommentarlängden måste vara minst 5 tecken");
             }
         }
        //om finns error 
