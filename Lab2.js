@@ -34,9 +34,14 @@ function validateForm() {
             }
         }
        //om finns error 
-    }catch(error){
-        alert(error);
-        return false;
+    }
+    catch(error){
+      document.getElementById("errorMsg").innerHTML = error;
+
+      // källa till att sätta klasser på ett element https://www.w3schools.com/jsref/met_element_setattribute.asp
+      document.getElementsByTagName("div")[2].setAttribute("class","alert-danger alert");
+
+      return false;
     }
     return true;
 }
