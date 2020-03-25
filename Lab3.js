@@ -27,8 +27,10 @@ function changeUnorderedListElement( inEvent ) {
       inEvent.currentTarget.className = "glyphicon glyphicon-minus";
 
       inEvent.currentTarget.querySelector("ul").className= "ulChildMax";
+        
+     }
 
-    }
+
     
     if(this.classList.contains("glyphicon-minus")){
         this.classList.remove("glyphicon-minus");
