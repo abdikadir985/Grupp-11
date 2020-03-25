@@ -1,10 +1,8 @@
 //Lab3.js
-let parent  = document.querySelectorAll('[title="parent"]');
-for(let i=0;i<parent.length;i++){
-    parent[i].addEventListener("click",changeUnorderedListElement);
-}
+window.addEventListener("load", prepareNestedUnorderedList);
 
 function prepareNestedUnorderedList() {}
+
 function changeUnorderedListElement( inEvent ) {
     if(this.classList.contains("glyphicon-minus")){
         this.classList.remove("glyphicon-minus");
