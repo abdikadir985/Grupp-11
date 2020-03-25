@@ -20,6 +20,16 @@ function changeUnorderedListElement( inEvent ) {
     
    // console.log(inEvent)
     
+  if(inEvent.target == inEvent.currentTarget){
+
+    if(inEvent.currentTarget.className == "glyphicon glyphicon-plus"){
+
+      inEvent.currentTarget.className = "glyphicon glyphicon-minus";
+
+      inEvent.currentTarget.querySelector("ul").className= "ulChildMax";
+
+    }
+    
     if(this.classList.contains("glyphicon-minus")){
         this.classList.remove("glyphicon-minus");
         this.classList.add("glyphicon-plus");
