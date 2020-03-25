@@ -34,6 +34,7 @@ function changeUnorderedListElement( inEvent ) {
       //där du ändrar den plus till ett minus och där innehållet ska dyka upp
 
      }
+     
     else if(inEvent.currentTarget.className == "glyphicon glyphicon-minus"){
 
       inEvent.currentTarget.className = "glyphicon glyphicon-plus";
