@@ -1,6 +1,6 @@
 //Lab3.js gruppmeddlemar: (Abdiakdir Omar, Blend Zebari, Albin Eriksson och Hoseop joun
 
-//när prepareNestedUnorderedList laddas upp
+//när window laddas upp körs prepareNestedUnorderedList
 window.addEventListener("load", prepareNestedUnorderedList);
 
 function prepareNestedUnorderedList() {
