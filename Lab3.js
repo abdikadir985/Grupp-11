@@ -12,10 +12,7 @@ let links = document.querySelectorAll('.glyphicon.glyphicon-minus');
     links[i].className = "glyphicon glyphicon-plus";
     links[i].addEventListener("click", changeUnorderedListElement);
     links[i].querySelector("ul").className = "ulChildMin";
-      // Loopen går igenom alla element i "links" och ändrar 
-      //className till "glyphicon glyphicon-plus" så att minustecknet blir ett plustecken,funktionen 
-      //anropar changeUnorderedListElement() och slutligen ändrar "ul" className till "ulChildMin" som gör att listan döljs.
-
+      
   }
 
 }
