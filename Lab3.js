@@ -48,3 +48,4 @@ function changeUnorderedListElement( inEvent ) {
         // console.log(inEvent.currentTarget);
        }
     }
+}
