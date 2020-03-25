@@ -29,6 +29,21 @@ function changeUnorderedListElement( inEvent ) {
       inEvent.currentTarget.querySelector("ul").className= "ulChildMax";
         
      }
+      
+      
+    else if(inEvent.currentTarget.className == "glyphicon glyphicon-minus"){
+
+      inEvent.currentTarget.className = "glyphicon glyphicon-plus";
+
+      inEvent.currentTarget.querySelector("ul").className= "ulChildMin";   
+        
+        
+        
+        
+        
+        // console.log(inEvent.currentTarget);
+       }
+    }
 
 
     
