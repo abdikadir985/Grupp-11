@@ -4,6 +4,7 @@ window.addEventListener("load", prepareNestedUnorderedList);
 function prepareNestedUnorderedList() {
 
 let links = document.querySelectorAll('.glyphicon.glyphicon-minus');
+    // Elementer som har className 'glyphicon.glyphicon-minus' tilldelas variabeln links.
     
   // console.log(links);
     
@@ -11,6 +12,9 @@ let links = document.querySelectorAll('.glyphicon.glyphicon-minus');
     links[i].className = "glyphicon glyphicon-plus";
     links[i].addEventListener("click", changeUnorderedListElement);
     links[i].querySelector("ul").className = "ulChildMin";
+      // Loopen går igenom alla element i "links" och ändrar 
+      //className till "glyphicon glyphicon-plus" så att minustecknet blir ett plustecken,funktionen 
+      //anropar changeUnorderedListElement() och slutligen ändrar "ul" className till "ulChildMin" som gör att listan döljs.
 
   }
 
@@ -44,14 +48,3 @@ function changeUnorderedListElement( inEvent ) {
         // console.log(inEvent.currentTarget);
        }
     }
-
-
-    
-    if(this.classList.contains("glyphicon-minus")){
-        this.classList.remove("glyphicon-minus");
-        this.classList.add("glyphicon-plus");
-    }else{
-        this.classList.remove("glyphicon-plus");
-        this.classList.add("glyphicon-minus");
-    }
-}
