@@ -4,6 +4,14 @@ window.addEventListener("load", prepareNestedUnorderedList);
 function prepareNestedUnorderedList() {
 
 let links = document.querySelectorAll('.glyphicon.glyphicon-minus');
+    
+    
+  for(let i = 0; i < links.length; i++) {
+      Links[i]
+      Links[i]
+      Links[i]
+
+  }
 
 
 }
