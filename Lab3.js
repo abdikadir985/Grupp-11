@@ -8,16 +8,18 @@ let links = document.querySelectorAll('.glyphicon.glyphicon-minus');
   // console.log(links);
     
   for(let i = 0; i < links.length; i++) {
-      Links[i].className = "glyphicon glyphicon-plus";
-      Links[i]
-      Links[i]
+    links[i].className = "glyphicon glyphicon-plus";
+    links[i].addEventListener("click", changeUnorderedListElement);
+    links[i].querySelector("ul").className = "ulChildMin";
 
   }
-
 
 }
 
 function changeUnorderedListElement( inEvent ) {
+    
+   // console.log(inEvent)
+    
     if(this.classList.contains("glyphicon-minus")){
         this.classList.remove("glyphicon-minus");
         this.classList.add("glyphicon-plus");
