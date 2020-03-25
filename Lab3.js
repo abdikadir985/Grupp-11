@@ -5,6 +5,7 @@ function prepareNestedUnorderedList() {
 
 let links = document.querySelectorAll('.glyphicon.glyphicon-minus');
     
+  // console.log(links);
     
   for(let i = 0; i < links.length; i++) {
       Links[i]
