@@ -1,4 +1,4 @@
-//Lab3.js
+//Lab3.js gruppmeddlemar: (Abdiakdir Omar, Blend Zebari, Albin Eriksson och Hoseop joun
 window.addEventListener("load", prepareNestedUnorderedList);
 
 function prepareNestedUnorderedList() {
