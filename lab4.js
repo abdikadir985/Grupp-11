@@ -19,10 +19,10 @@ window.addEventListener('load',createTable);
 function createTable() {
 	console.log('table created');
 	let table = document.createElement('table');
+	let thead = document.createElement('thead');
+	let tr = document.createElement('tr');
 	table.setAttribute('class','table table-striped table-hover');
 	let container = document.getElementsByClassName('container-fluid')[0];
-	let tr = document.createElement('tr');
-	let thead = document.createElement('thead');
 	createTableHead(tr,JSONCars[0]);
 	thead.appendChild(tr);
 	table.appendChild(thead);
@@ -33,15 +33,17 @@ function createTable() {
 	}
 	container.appendChild(table);
 }
+
 function createTableHead(inTrRef, inJSONObject) {
 	for(let i=0;i<Object.keys(inJSONObject).length;i++){
 		let th = document.createElement('th');
 		let thTextNode = document.createTextNode(Object.keys(inJSONObject)[i]);
-		console.log(thTextNode);
 		th.appendChild(thTextNode);
 		inTrRef.appendChild(th);
+		console.log(thTextNode);
 	}
 }
+
 function createTableRow(inTrRef, inJSONObject) {
 	for(let i=0;i<Object.values(inJSONObject).length;i++){
 		let td = document.createElement('td');
