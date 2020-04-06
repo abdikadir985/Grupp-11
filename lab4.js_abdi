@@ -53,6 +53,7 @@ function createTable() {  //functionen skapar en tabell
 		inTrRef   = document.createElement("tr");
 		tableBodyRef.appendChild(inTrRef); //tr elementet läggs i tbody  elementet
 		currentCar = JSONCars[counter]; //currentCar tilldelas till nuvarande vektor plats
+		//så i princip är denna kod vad som låter dig avsluta uppgift 2 och 3... (lägga till, ta bort saken...)
 
 		createTableRow(inTrRef, currentCar); //anropar createTableRow()function for att skapa tr taggen
 
@@ -73,6 +74,8 @@ function createTableHead(inTrRef, inJSONObject) {
 		thNodeRef.appendChild(textSnutt);
 		//console.log(textSnutt);
 
+		//keys är detsamma som just regnr, fabrikat och modell... dvs det är det vänstra stycket
+		//tillhörande en JSON dvs. {"modell" : "1996"} keys här är just "modell"
 	}
 
 }
@@ -88,6 +91,8 @@ function createTableRow(inTrRef, inJSONObject) {
 		let textSnutt = document.createTextNode(values[counter]);
 		tdNodeRef.appendChild(textSnutt);
 
+		//och här är values detsamma som det högra stycket i ett JSON
+		// {"modell" : "1996"} values här är "1996"
 	}
 
 }
