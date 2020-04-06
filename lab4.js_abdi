@@ -1,8 +1,20 @@
-/* Lab4.js */
+/* Lab4.js */ /*[Blend Zebari, Abdikadir Omar, Albin Eriksson, Ho seop Jeong]*/
 
 "use strict";
-var JSONCars = [
+var JSONCars = [ //objekt
 
+/*
+När en begär dig att kunna ta bort och lägga till objekt till din JSONCARS innebär detta
+du ska ha möjlighet att kunna ta bort och lägga till:
+{"regnr" : "III999", "fabrikat" : "Suzuki", "modell" : "Swift", "mil" : "9000"}
+DETTA OVAN! (dvs öka din array men en till eller minska den med en...)
+
+när den begär dig att kunna lägga till och ta bort någon form av attribut i JSONCARS syftar de på
+att ändra innehållet i din array som du har... t.ex från 'Suzuki' till 'Skoda' hos "fabrikat"
+{"regnr" : "III999", "fabrikat" : "Suzuki", "modell" : "Swift", "mil" : "9000"}
+{"regnr" : "III999", "fabrikat" : "Skoda", "modell" : "Swift", "mil" : "9000"}
+                   ETT EXEMPEL PÅ VAD JAG MENAR HÄR OVAN
+*/
 	{"regnr" : "AAA111", "fabrikat" : "Volvo", "modell" : "V70", "mil" : "1000"},
 	{"regnr" : "BBB222", "fabrikat" : "Saab", "modell" : "95", "mil" : "2000"},
 	{"regnr" : "CCC333", "fabrikat" : "Audi", "modell" : "A4", "mil" : "3000"},
@@ -18,14 +30,14 @@ var JSONCars = [
 window.addEventListener("load",createTable);
 
 function createTable() {  //functionen skapar en tabell
-
+	//attributes
 	let divNodeRef = document.querySelector(".container-fluid");
 	let tableNodeRef = document.createElement("table");
 	let tableHeadRef = document.createElement("thead");
 	let tableBodyRef = document.createElement("tbody");
 	let inTrRef      = document.createElement("tr");
 	let currentCar   = null;  //car objekt skapas
-
+	//attributes
 	divNodeRef.appendChild(tableNodeRef);
 	tableNodeRef.appendChild(tableHeadRef);
 	tableHeadRef.appendChild(inTrRef);
@@ -36,9 +48,6 @@ function createTable() {  //functionen skapar en tabell
 
 	createTableHead(inTrRef, JSONCars[0]);  //anropar function createTableHead med parameter inTrRef, och forsta objektet i JSONCars
 
-
-
-
 	for(let counter = 0; counter < JSONCars.length; counter++){
 		//loopen skapar tr element och lägger currentCar vilket i detta fall är JSONCars[0] alltså rubriken.
 		inTrRef   = document.createElement("tr");
@@ -48,7 +57,6 @@ function createTable() {  //functionen skapar en tabell
 		createTableRow(inTrRef, currentCar); //anropar createTableRow()function for att skapa tr taggen
 
 	}
-
 
 }
 
@@ -81,6 +89,5 @@ function createTableRow(inTrRef, inJSONObject) {
 		tdNodeRef.appendChild(textSnutt);
 
 	}
-
 
 }
